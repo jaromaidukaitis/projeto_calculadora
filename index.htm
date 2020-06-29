@@ -1,52 +1,51 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-    
-    </head>
-    <body>
-        <div id="display"> </div>
-        <button id="soma">+</button>
-        <button id="numeroUm">1</button>
-        <button id="igual">=</button>
-
-        <script>
-            //objeto calculadora
-            let calculadora = {};
-            calculadora.display = document.querySelector("#display");
-
-            let botaoUm = document.querySelector("#numeroUm");
-            let botaoSoma = document.querySelector("#soma");
-            let botaoIgual = document.querySelector("#igual");
-
-            let acumulador = "";
-            
-            botaoUm.onclick = function() {
-                calculadora.display.innerText += 1;
-            }
-
-            botaoSoma.onclick = function() {
-                acumulador += calculadora.display.innerText;
-                acumulador += " + ";
-                calculadora.display.innerText = "";
-            }
-
-            botaoIgual.onclick = function() {
-                //TODO: checar se existe conteúdo dentro do display
-
-                //colocando conteúdo do display no acumulador
-                acumulador += calculadora.display.innerText;
-                //resolvendo conta (conteúdo acumulador)
-                let resultado = eval(acumulador);
-                //colocando no display o conteúdo do acumulador
-                calculadora.display.innerText = resultado;
-                // limpando o acumulador
-                acumulador = "";
-
-            }
-
-        </script>
-
-    </body>
-
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Calculadora</title>
+	</head>
+	<body>
+		<div id="calculadora">
+			<div id="display">
+				<div id="memoria"></div>
+				<div id="placeholder"></div>
+			</div>
+			<div id="botoes">
+				<div id="numerosDiv">
+					<div>
+						<button id="limparTudo">AC</button>
+						<button id="limpar">C</button>
+						<button id="backspace"><=</button>
+					</div>
+					<button class="numeros" id="numeroSete">7</button>
+					<button class="numeros" id="numeroOito">8</button>
+					<button class="numeros" id="numerosnumeroNove">9</button>
+					<button class="numeros" id="numeroQuatro">4</button>
+					<button class="numeros" id="numeroCinco">5</button>
+					<button class="numeros" id="numeroSeis">6</button>
+					<button class="numeros" id="numeroUm">1</button>
+					<button class="numeros" id="numeroDois">2</button>
+					<button class="numeros" id="numeroTres">3</button>
+					<button id="trocaSinal">+/-</button>
+					<button class="numeros" id="numeroZero">0</button>
+					<button class="numeros" id="virgula">.</button>
+				</div>
+				<div id="operadores">
+					<button id="abreParenteses">(</button>
+					<button id="fechaParenteses">)</button>
+					<button id="botaoSoma">+</button>
+					<button id="botaoSubtracao">-</button>
+					<button id="botaoProduto">x</button>
+					<button id="botaoDivisao">&divide;</button>
+					<button id="aoQuadrado">x²</button>
+					<button id="raizQuadrada">&radic;</button>
+					<button id="botaoPorcentagem">%</button>
+					<button id="botaoIgual">=</button>
+				</div>
+			</div>
+		</div>
+		<script src="/js/calculadora.js"></script>
+	</body>
 </html>

@@ -1,0 +1,59 @@
+* {
+	margin: 0px;
+	paddin: 0px;
+}
+
+body {
+	background-color: black;
+	padding: 40px;
+}
+
+#calculadora {
+	border: 5px solid white;
+	display: inline-block;
+	padding: 10px;
+	width: 630px;
+	box-sizing: border-box;
+}
+
+#display {
+	width: 600px;
+	height: 80px;
+	background-color: lightgray;
+	margin-bottom: 40px;
+	text-align: end;
+	font-size: 30px;
+}
+
+#memoria {
+	height: 40px;
+	font-size: 20px;
+}
+
+#placeholder {
+	height: 40px;
+}
+
+#botoes {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#numerosDiv {
+	flex-grow: 1;
+}
+
+#numerosDiv button {
+	width: 32%;
+	height: 40px;
+}
+
+#operadores {
+	flex-grow: 1;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#operadores button {
+	width: 50%;
+}
